@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1739">
+    <title>Qazaq Weather</title>
+  <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#123b70">
+</head>
+<body>
+
+    <header>
+        <h1>🌦️ Qazaq Weather</h1>
+        <p>Қазақстанның ауа райы</p>
+    </header>
+
+    <main>
+        <section id="weather">
+            
+<h2 id="city-name">Қызылорда қаласы</h2>
+
+<label for="city-select">🌍 Қаланы таңда:</label>
+<select id="city-select">
+    <option value="44.85,65.50">Қызылорда</option>
+    <option value="51.17,71.43">Астана</option>
+    <option value="43.24,76.95">Алматы</option>
+    <option value="42.32,69.59">Шымкент</option>
+    <option value="50.28,57.17">Ақтөбе</option>
+    <option value="43.65,51.16">Ақтау</option>
+    <option value="43.30,68.25">Түркістан</option>
+    <option value="49.80,73.10">Қарағанды</option>
+    <option value="42.90,71.37">Тараз</option>
+    <option value="49.95,82.61">Өскемен</option>
+</select>
+
+            <p id="status">Ауа райы жүктелуде...</p>
+
+            <div class="temperature">
+                <span id="temperature">--°C</span>
+            </div>
+
+            <p id="description">Ауа райы анықталуда</p>
+
+            <div class="details">
+                <p>💧 Ылғалдылық: <span id="humidity">--%</span></p>
+                <p>💨 Жел: <span id="wind">-- км/сағ</span></p>
+                <p>🌧️ Жауын-шашын: <span id="rain">-- мм</span></p>
+                <p>🌡️ Сезілетін температура: <span id="feels">--°C</span></p>
+            </div>
+
+            <button id="refresh">Деректерді жаңарту</button>
+        </section>
+
+        <section id="forecast">
+    <h2>📅 7 күндік болжам</h2>
+    <div id="forecast-list" class="forecast-list">
+        <p>Болжам жүктелуде...</p>
+    </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Qazaq Weather © 2026</p>
+        <p>Ауа райы деректері Open-Meteo арқылы</p>
+    </footer>
+  <script src="script.js"></script>
+</body>
+</html>

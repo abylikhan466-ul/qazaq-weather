@@ -1,0 +1,13 @@
+
+{
+  "name": "Qazaq Weather",
+  "short_name": "Qazaq Weather",
+  "description": "Қазақстан қалаларының ауа райы болжамы",
+  "lang": "kk",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b1f3a",
+  "theme_color": "#123b70"
+}

@@ -1,0 +1,200 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(160deg, #07152e, #102b57, #174c78);
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 24px 16px;
+}
+
+header {
+    max-width: 650px;
+    margin: 10px auto 28px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+header p {
+    color: #b9d7f7;
+    font-size: 15px;
+}
+
+main {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+section {
+    background: rgba(255, 255, 255, 0.09);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 24px;
+    padding: 24px;
+    margin-bottom: 18px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+h2 {
+    font-size: 21px;
+    margin-bottom: 18px;
+}
+
+#status {
+    color: #b9d7f7;
+    font-size: 14px;
+}
+
+.temperature {
+    text-align: center;
+    padding: 20px 0 8px;
+}
+
+#temperature {
+    font-size: clamp(58px, 16vw, 86px);
+    font-weight: bold;
+    letter-spacing: -3px;
+}
+
+#description {
+    text-align: center;
+    color: #c5e1ff;
+    margin-bottom: 24px;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.details p {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 14px 10px;
+    font-size: 13px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.details span {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+button {
+    width: 100%;
+    border: none;
+    border-radius: 14px;
+    padding: 15px;
+    margin-top: 22px;
+    background: #8bd8ff;
+    color: #082342;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:active {
+    opacity: 0.8;
+}
+
+#forecast p {
+    color: #c5e1ff;
+    line-height: 1.6;
+}
+
+footer {
+    max-width: 650px;
+    margin: 28px auto 0;
+    text-align: center;
+    color: #a8c4e5;
+    font-size: 12px;
+    line-height: 1.8;
+}
+/* 7 күндік ауа райы болжамы */
+.forecast-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.forecast-day {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 16px 10px;
+    text-align: center;
+    transition: transform 0.2s ease,
+                background 0.2s ease;
+}
+
+.forecast-day:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.forecast-day h3 {
+    font-size: 16px;
+    margin: 0 0 8px;
+}
+
+.forecast-day p {
+    font-size: 14px;
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+.forecast-day p:nth-of-type(2) {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+@media (max-width: 360px) {
+    .forecast-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Қала таңдау мәзірі */
+#city-select {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    margin: 12px 0 20px;
+    padding: 13px 16px;
+
+    background-color: #162b4d;
+    color: #ffffff;
+
+    border: 1px solid #5278ad;
+    border-radius: 12px;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    outline: none;
+    cursor: pointer;
+}
+
+/* Мәзірді таңдағанда */
+#city-select:focus {
+    border-color: #69b7ff;
+    box-shadow: 0 0 0 3px rgba(105, 183, 255, 0.2);
+}
+
+/* Қала тізіміндегі нұсқалар */
+#city-select option {
+    background-color: #162b4d;
+    color: #ffffff;
+}
